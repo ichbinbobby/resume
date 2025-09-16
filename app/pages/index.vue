@@ -22,10 +22,22 @@
       <h3 class="text-xl">Frontend Developer <UBadge label="current" /></h3>
 
       <ul class="mt-2 list-disc list-inside">
-        <li>Developed and maintained web applications using modern frameworks.</li>
-        <li>Collaborated with cross-functional teams to define and implement new features.</li>
-        <li>Replaced legacy code with modern frameworks and UI libraries.</li>
+        <li>Developed and maintained company's customer care application</li>
+        <li>Replaced AngularJS legacy code with Vue 2</li>
+        <li>Build components with the Vuetify UI library</li>
+        <li>Introduced state management with Vuex and Pinia</li>
+        <li>Rewrote components from Options API to Composition API in order to upgrade to Vue 3</li>
+        <li>Unit testing with Vue Test Utils and Vitest</li>
       </ul>
+
+      <USeparator class="my-4" />
+
+      <h3 class="text-xl">Application Developer Apprenticeship</h3>
+
+      <p class="mt-2">
+        Completed a three year apprenticeship in a dual education system. Switched between different departments at the company 
+        in order to learn various topics and technologies, including Webdesign, Backend Development, Frontend Development, and IT Support.
+      </p>
     </UCard>
   </UContainer>
 </template>
