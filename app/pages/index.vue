@@ -150,5 +150,44 @@
 
       <h4 class="text-muted text-base mt-1">Max-Planck-Gymnasium Berlin</h4>
     </UCard>
+
+    <UCard class="my-6">
+      <template #header>
+        <span class="text-secondary text-lg">Volunteer Experience</span>
+      </template>
+
+      <div class="flex justify-between items-center">
+        <h3 class="text-xl">Pokemon GO Community Ambassador</h3>
+      </div>
+
+      <h4 class="text-muted text-base mt-1">Alexanderplatz</h4>
+
+      <ul class="mt-2 list-disc list-inside">
+        <li>Event planning and coordination</li>
+        <li>Crowd management with up to 400 players</li>
+        <li>Public speaking</li>
+        <li>Online platform moderation</li>
+        <li>Communicating with game representatives about event details</li>
+      </ul>
+
+      <USeparator class="my-4" />
+
+      <div class="flex justify-between items-center">
+        <h3 class="text-xl">Cleanup Organizer</h3>
+
+        <UTooltip text="Instagram page of Cleanupkollektiv">
+          <UButton icon="i-simple-icons-instagram" color="neutral" target="_blank" to="https://www.instagram.com/cleanupkollektiv/" variant="subtle" />
+        </UTooltip>
+      </div>
+
+      <h4 class="text-muted text-base mt-1">Cleanupkollektiv</h4>
+
+      <ul class="mt-2 list-disc list-inside">
+        <li>Social media management</li>
+        <li>Organizing regular cleanup events in public spaces to promote environmental awareness</li>
+        <li>Promoting garbage separation and recycling at work</li>
+        <li>Collecting and donating bottle caps to be sent for recycling</li>
+      </ul>
+    </UCard>
   </UContainer>
 </template>
