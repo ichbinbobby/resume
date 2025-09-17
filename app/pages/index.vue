@@ -1,7 +1,7 @@
 <template>
   <UContainer>
     <h1 class="text-primary text-4xl mt-4">Resume</h1>
-    <h2 class="text-default text-2xl">Thanh Binh Nguyen</h2>
+    <h2 class="text-default text-2xl">ichbinbobby</h2>
 
     <UCard class="mt-6">
       <template #header>
@@ -9,8 +9,12 @@
           <span class="text-secondary text-lg">Summary</span>
           
           <div class="flex items-center gap-2">
-            <UButton icon="i-simple-icons-github" color="neutral" target="_blank" to="https://github.com/ichbinbobby" variant="subtle" />
-            <UButton icon="i-simple-icons-linkedin" color="neutral" target="_blank" to="https://www.linkedin.com/in/ichbinbobby/" variant="subtle" />
+            <UTooltip text="GitHub Profile">
+              <UButton icon="i-simple-icons-github" color="neutral" target="_blank" to="https://github.com/ichbinbobby" variant="subtle" />
+            </UTooltip>
+            <UTooltip text="LinkedIn Profile">
+              <UButton icon="i-simple-icons-linkedin" color="neutral" target="_blank" to="https://www.linkedin.com/in/ichbinbobby/" variant="subtle" />
+            </UTooltip>
           </div>
         </div>
       </template>
@@ -23,7 +27,30 @@
 
     <UCard class="mt-6">
       <template #header>
-        <span class="text-secondary text-lg">Experience</span>
+        <div class="flex justify-between items-center">
+          <span class="text-secondary text-lg">Experience</span>
+
+          <div class="flex items-center gap-2">
+            <UTooltip text="HTML5">
+              <UIcon name="i-simple-icons-html5" class="size-5 text-orange-500" />
+            </UTooltip>
+            <UTooltip text="CSS3">
+              <UIcon name="i-simple-icons-css3" class="size-5 text-blue-500" />
+            </UTooltip>
+            <UTooltip text="JavaScript">
+              <UIcon name="i-simple-icons-javascript" class="size-5 text-yellow-500" />
+            </UTooltip>
+            <UTooltip text="Vue.js">
+              <UIcon name="i-simple-icons-vuedotjs" class="size-5 text-green-500" />
+            </UTooltip>
+            <UTooltip text="Vuetify">
+              <UIcon name="i-simple-icons-vuetify" class="size-5 text-blue-600" />
+            </UTooltip>
+            <UTooltip text="Nuxt.js">
+              <UIcon name="i-simple-icons-nuxtdotjs" class="size-5 text-green-400" />
+            </UTooltip>
+          </div>
+        </div>
       </template>
 
       <div class="flex justify-between items-center">
@@ -77,7 +104,7 @@
       </div>
 
       <p class="mt-2">
-        Worked as a restaurant employee in a major fast food chain. Gained experience in customer service, teamwork and working under pressure.
+        Worked as restaurant employee in a major fast food chain. Gained experience in customer service, teamwork and working under pressure.
         Duties were taking orders, restocking and cleaning.
       </p>
     </UCard>
