@@ -26,7 +26,11 @@
         <span class="text-lg">Experience</span>
       </template>
 
-      <h3 class="text-xl">Frontend Developer <UBadge label="current" /></h3>
+      <div class="flex justify-between items-center">
+        <h3 class="text-xl">Frontend Developer <UBadge label="current" /></h3>
+
+        <UBadge color="neutral" variant="outline">5+ years</UBadge>
+      </div>
 
       <ul class="mt-2 list-disc list-inside">
         <li>Developed and maintained company's customer care application</li>
@@ -39,7 +43,11 @@
 
       <USeparator class="my-4" />
 
-      <h3 class="text-xl">Application Developer Apprenticeship</h3>
+      <div class="flex justify-between items-center">
+        <h3 class="text-xl">Application Developer Apprenticeship</h3>
+
+        <UBadge color="neutral" variant="outline">3 years</UBadge>
+      </div>
 
       <p class="mt-2">
         Completed a three year apprenticeship in a dual education system. Switched between different departments at the company 
