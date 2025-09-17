@@ -59,6 +59,8 @@
         <UBadge color="neutral" variant="outline">5+ years</UBadge>
       </div>
 
+      <h4 class="text-muted text-base mt-1">STRATO</h4>
+
       <ul class="mt-2 list-disc list-inside">
         <li>Developed and maintained company's customer care application</li>
         <li>Replaced AngularJS legacy code with Vue 2</li>
@@ -76,6 +78,8 @@
         <UBadge color="neutral" variant="outline">3 years</UBadge>
       </div>
 
+      <h4 class="text-muted text-base mt-1">STRATO</h4>
+
       <p class="mt-2">
         Completed a three year apprenticeship in a dual education system. Switched between different departments at the company 
         in order to learn various topics and technologies, including Webdesign, Backend Development, Frontend Development and IT Support.
@@ -88,6 +92,8 @@
 
         <UBadge color="neutral" variant="outline">3 months</UBadge>
       </div>
+
+      <h4 class="text-muted text-base mt-1">Health Service Executive</h4>
 
       <p class="mt-2">
         Completed a three month internship abroad in the IT Service Desk as part of the Erasmus+ program. Gained hands-on experience in 
@@ -102,6 +108,8 @@
 
         <UBadge color="neutral" variant="outline">2.5 years</UBadge>
       </div>
+
+      <h4 class="text-muted text-base mt-1">McDonald's</h4>
 
       <p class="mt-2">
         Worked as restaurant employee in a major fast food chain. Gained experience in customer service, teamwork and working under pressure.
