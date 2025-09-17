@@ -1,7 +1,22 @@
 <template>
   <UContainer>
-    <h1 class="text-primary text-4xl mt-4">Resume</h1>
-    <h2 class="text-default text-2xl">ichbinbobby</h2>
+    <div class="flex justify-between items-center">
+      <div>
+        <h1 class="text-primary text-4xl mt-4">Resume</h1>
+        <h2 class="text-default text-2xl">ichbinbobby</h2>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <UTooltip text="Toggle Dark Mode">
+          <UButton 
+            :icon="$colorMode.value === 'dark' ? 'i-lucide-sun' : 'i-lucide-moon'"
+            color="neutral" 
+            variant="subtle"
+            @click="$colorMode.preference = $colorMode.value === 'dark' ? 'light' : 'dark'"
+          />
+        </UTooltip>
+      </div>
+    </div>
 
     <UCard class="mt-6">
       <template #header>
