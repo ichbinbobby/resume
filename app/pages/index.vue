@@ -1,12 +1,23 @@
 <template>
-  <UContainer>
-    <div class="flex justify-between items-center">
+  <div class="min-h-screen bg-background">
+    <UContainer class="py-8 px-6">
+      <div class="flex justify-between items-center">
       <div>
         <h1 class="text-primary text-4xl mt-4">Resume</h1>
         <h2 class="text-default text-2xl">ichbinbobby</h2>
       </div>
 
       <div class="flex items-center gap-2">
+        <UTooltip text="Download PDF">
+          <UButton 
+            icon="i-lucide-download"
+            color="primary" 
+            variant="subtle"
+            :loading="isGeneratingPdf"
+            @click="downloadPdf"
+          />
+        </UTooltip>
+        
         <UTooltip text="Toggle Dark Mode">
           <UButton 
             :icon="$colorMode.value === 'dark' ? 'i-lucide-sun' : 'i-lucide-moon'"
@@ -127,7 +138,7 @@
       <h4 class="text-muted text-base mt-1">McDonald's</h4>
 
       <p class="mt-2">
-        Worked as restaurant employee in a major fast food chain. Gained experience in customer service, teamwork and working under pressure.
+        Gained experience in customer service, teamwork and working under pressure.
         Duties were taking orders, restocking and cleaning.
       </p>
     </UCard>
@@ -204,5 +215,68 @@
         <li>Collecting and donating bottle caps to be sent for recycling</li>
       </ul>
     </UCard>
-  </UContainer>
+    </UContainer>
+  </div>
 </template>
+
+<script setup>
+const isGeneratingPdf = ref(false)
+const colorMode = useColorMode()
+
+const downloadPdf = async () => {
+  isGeneratingPdf.value = true
+  
+  try {
+    const response = await $fetch('/api/generate-pdf', {
+      method: 'POST',
+      body: {
+        url: window.location.href,
+        colorMode: colorMode.value
+      },
+      responseType: 'arrayBuffer'
+    })
+    
+    // Create blob and download
+    const blob = new Blob([response], { type: 'application/pdf' })
+    const url = URL.createObjectURL(blob)
+    
+    const link = document.createElement('a')
+    link.href = url
+    link.download = 'resume-ichbinbobby.pdf'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+    
+    URL.revokeObjectURL(url)
+  } catch (error) {
+    console.error('Error generating PDF:', error)
+    // You could add a toast notification here to inform the user
+  } finally {
+    isGeneratingPdf.value = false
+  }
+}
+</script>
+
+<style>
+/* Ensure full page background color for PDF generation */
+@media print {
+  html, body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    margin: 0;
+    padding: 0;
+  }
+  
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  /* Full bleed background with internal padding */
+  .min-h-screen {
+    min-height: 100vh !important;
+    padding: 5mm 15mm 20mm 15mm !important;
+    margin: 0 !important;
+  }
+}
+</style>
