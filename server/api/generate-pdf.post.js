@@ -13,9 +13,10 @@ export default defineEventHandler(async (event) => {
 
     console.log('Generating PDF for:', url, 'with color mode:', colorMode)
 
-    // Launch Puppeteer
+    // Launch Puppeteer with Vercel-compatible settings
     const browser = await puppeteer.launch({
       headless: true,
+      executablePath: process.env.VERCEL ? '/usr/bin/google-chrome-stable' : undefined,
       args: [
         '--no-sandbox',
         '--disable-setuid-sandbox',
@@ -23,7 +24,9 @@ export default defineEventHandler(async (event) => {
         '--disable-accelerated-2d-canvas',
         '--no-first-run',
         '--no-zygote',
-        '--disable-gpu'
+        '--disable-gpu',
+        '--single-process',
+        '--disable-web-security'
       ]
     })
 
