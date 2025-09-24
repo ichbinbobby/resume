@@ -178,20 +178,24 @@
       </UCard>
 
       <UCard class="mt-6">
+        <template #header>
+          <span class="text-secondary text-lg">Language Experience</span>
+        </template>
+
         <div class="flex justify-between items-center">
           <h3 class="text-xl">German</h3>
+          
+          <UIcon name="i-twemoji-flag-germany" class="size-6" />
         </div>
 
         <h4 class="text-muted text-base mt-1">Mother Tongue</h4>
 
         <USeparator class="my-4" />
 
-        <template #header>
-          <span class="text-secondary text-lg">Language Experience</span>
-        </template>
-
         <div class="flex justify-between items-center">
           <h3 class="text-xl">English</h3>
+
+          <UIcon name="i-twemoji-flag-united-kingdom" class="size-6" />
         </div>
 
         <h4 class="text-muted text-base mt-1">C1 Level</h4>
@@ -207,6 +211,8 @@
 
         <div class="flex justify-between items-center">
           <h3 class="text-xl">Japanese</h3>
+
+          <UIcon name="i-twemoji-flag-japan" class="size-6" />
         </div>
 
         <h4 class="text-muted text-base mt-1">A1 Level</h4>
