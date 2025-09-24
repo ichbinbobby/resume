@@ -201,10 +201,10 @@
         <h4 class="text-muted text-base mt-1">C1 Level</h4>
 
         <ul class="mt-2 list-disc list-inside">
-          <li>IT Service Desk Internship in Dublin ( 2019 - 3 months )</li>
-          <li>International House Belfast ( 2019 - 2 weeks )</li>
-          <li>Glasgow School of English ( 2018 - 2 weeks )</li>
-          <li>High School Year in Kentucky ( 2009/2010 - 1 year )</li>
+          <li>IT Service Desk Internship in Dublin <UBadge color="neutral" label="2019 for 3 months" variant="soft" /></li>
+          <li>International House Belfast <UBadge color="neutral" label="2019 for 2 weeks" variant="soft" /></li>
+          <li>Glasgow School of English <UBadge color="neutral" label="2018 for 2 weeks" variant="soft" /></li>
+          <li>High School Year in Kentucky <UBadge color="neutral" label="2009/2010 for 1 year" variant="soft" /></li>
         </ul>
 
         <USeparator class="my-4" />
@@ -218,10 +218,10 @@
         <h4 class="text-muted text-base mt-1">A1 Level</h4>
 
         <ul class="mt-2 list-disc list-inside">
-          <li>GLS Sprachschule Berlin ( 2023 - 2025 )</li>
-          <li>GenkiJACS Tokyo ( 2024 - 6 weeks )</li>
-          <li>GenkiJACS Kyoto ( 2023 - 4 weeks )</li>
-          <li>EF Tokyo ( 2022 - 4 weeks )</li>
+          <li>GLS Sprachschule Berlin <UBadge color="neutral" label="2023 for 2 years" variant="soft" /></li>
+          <li>GenkiJACS Tokyo <UBadge color="neutral" label="2024 for 6 weeks" variant="soft" /></li>
+          <li>GenkiJACS Kyoto <UBadge color="neutral" label="2023 for 4 weeks" variant="soft" /></li>
+          <li>EF Tokyo <UBadge color="neutral" label="2022 for 4 weeks" variant="soft" /></li>
         </ul>
       </UCard>
 
