@@ -221,36 +221,82 @@
 
 <script setup>
 const isGeneratingPdf = ref(false)
-const colorMode = useColorMode()
 
 const downloadPdf = async () => {
   isGeneratingPdf.value = true
   
   try {
-    const response = await $fetch('/api/generate-pdf', {
-      method: 'POST',
-      body: {
-        url: window.location.href,
-        colorMode: colorMode.value
-      },
-      responseType: 'arrayBuffer'
-    })
+    // Get the actual card background color from a real card element
+    const sampleCard = document.querySelector('[class*="bg-card"]') || document.querySelector('div[class*="UCard"]') || document.querySelector('.mt-6')
+    const cardBgColor = sampleCard ? getComputedStyle(sampleCard).backgroundColor : (document.documentElement.classList.contains('dark') ? 'rgb(39, 39, 42)' : 'rgb(255, 255, 255)')
     
-    // Create blob and download
-    const blob = new Blob([response], { type: 'application/pdf' })
-    const url = URL.createObjectURL(blob)
+    // Add print-specific styles temporarily
+    const printStyles = document.createElement('style')
+    printStyles.textContent = `
+      @media print {
+        @page {
+          margin: 0;
+          size: A4;
+        }
+        
+        body * {
+          visibility: hidden;
+        }
+        
+        .print-area, .print-area * {
+          visibility: visible;
+        }
+        
+        .print-area {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          background-color: ${cardBgColor} !important;
+        }
+        
+        .min-h-screen {
+          min-height: auto !important;
+          padding: 5mm 15mm !important;
+          margin: 0 !important;
+          background-color: ${cardBgColor} !important;
+        }
+        
+        /* Reduce title spacing */
+        h1 {
+          margin-top: 0 !important;
+          padding-top: 0 !important;
+        }
+        
+        /* Ensure cards blend with background */
+        [class*="card"], .bg-card, [class*="UCard"] {
+          background-color: ${cardBgColor} !important;
+        }
+        
+        /* Override any conflicting backgrounds */
+        .bg-background {
+          background-color: ${cardBgColor} !important;
+        }
+      }
+    `
     
-    const link = document.createElement('a')
-    link.href = url
-    link.download = 'resume-ichbinbobby.pdf'
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
+    document.head.appendChild(printStyles)
     
-    URL.revokeObjectURL(url)
+    // Add print-area class to the resume container
+    const resumeContainer = document.querySelector('.min-h-screen')
+    resumeContainer.classList.add('print-area')
+    
+    // Trigger print
+    window.print()
+    
+    // Clean up after print dialog
+    setTimeout(() => {
+      document.head.removeChild(printStyles)
+      resumeContainer.classList.remove('print-area')
+    }, 1000)
+    
   } catch (error) {
-    console.error('Error generating PDF:', error)
-    // You could add a toast notification here to inform the user
+    alert('Error: ' + error.message)
   } finally {
     isGeneratingPdf.value = false
   }
@@ -258,8 +304,13 @@ const downloadPdf = async () => {
 </script>
 
 <style>
-/* Ensure full page background color for PDF generation */
+/* Ensure full page background color for PDF generation and remove browser headers */
 @media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  
   html, body {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
@@ -272,11 +323,29 @@ const downloadPdf = async () => {
     print-color-adjust: exact;
   }
   
+  /* Hide browser print headers and footers */
+  @page {
+    margin: 0;
+    @top-left { content: ""; }
+    @top-center { content: ""; }
+    @top-right { content: ""; }
+    @bottom-left { content: ""; }
+    @bottom-center { content: ""; }
+    @bottom-right { content: ""; }
+  }
+  
   /* Full bleed background with internal padding */
   .min-h-screen {
     min-height: 100vh !important;
     padding: 5mm 15mm 20mm 15mm !important;
     margin: 0 !important;
+    box-shadow: none !important;
+  }
+  
+  /* Reduce title spacing */
+  h1 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
   }
 }
 </style>
