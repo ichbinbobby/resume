@@ -219,6 +219,8 @@
         </ul>
       </UCard>
 
+      <div class="page-break-spacer" />
+      
       <UCard class="my-6">
         <template #header>
           <span class="text-secondary text-lg">Volunteer Experience</span>
@@ -276,19 +278,23 @@ const downloadPdf = async () => {
     const printStyles = document.createElement('style')
     printStyles.textContent = `
       @media print {
+        /* Remove default page margins and set A4 size */
         @page {
           margin: 0;
           size: A4;
         }
         
+        /* Hide all content by default for selective printing */
         body * {
           visibility: hidden;
         }
         
+        /* Show only print-area content and its children */
         .print-area, .print-area * {
           visibility: visible;
         }
         
+        /* Container for print content - positioned absolutely to control layout */
         .print-area {
           position: absolute;
           left: 0;
@@ -297,6 +303,7 @@ const downloadPdf = async () => {
           background-color: ${cardBgColor} !important;
         }
         
+        /* Main resume container - removes min-height and adds print margins */
         .min-h-screen {
           min-height: auto !important;
           padding: 5mm 15mm !important;
@@ -304,18 +311,18 @@ const downloadPdf = async () => {
           background-color: ${cardBgColor} !important;
         }
         
-        /* Reduce title spacing */
+        /* Remove top margin from main title for better print layout */
         h1 {
           margin-top: 0 !important;
           padding-top: 0 !important;
         }
         
-        /* Ensure cards blend with background */
+        /* Ensure all card components match the background color */
         [class*="card"], .bg-card, [class*="UCard"] {
           background-color: ${cardBgColor} !important;
         }
         
-        /* Override any conflicting backgrounds */
+        /* Override background color for main wrapper */
         .bg-background {
           background-color: ${cardBgColor} !important;
         }
@@ -388,6 +395,19 @@ const downloadPdf = async () => {
   h1 {
     margin-top: 0 !important;
     padding-top: 0 !important;
+  }
+  
+  /* Page break controls */
+  .page-break-spacer {
+    page-break-before: always !important;
+    height: 15mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Prevent cards from breaking across pages */
+  [class*="UCard"], .bg-card {
+    page-break-inside: avoid;
   }
 }
 </style>
