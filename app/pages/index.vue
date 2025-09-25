@@ -4,7 +4,6 @@
       <div class="flex justify-between items-center">
         <div>
           <h1 class="text-primary text-4xl mt-4">Resume</h1>
-          <h2 class="text-default text-2xl">ichbinbobby</h2>
         </div>
 
         <div class="flex items-center gap-2">
@@ -28,6 +27,12 @@
           </UTooltip>
         </div>
       </div>
+
+      <UBreadcrumb class="mt-2" :items="contactData" >
+        <template #separator>
+          <span class="mx-2 text-muted" />
+        </template>
+      </UBreadcrumb>
 
       <UCard class="mt-6">
         <template #header>
@@ -92,7 +97,7 @@
           <li>Replaced AngularJS legacy code with Vue 2</li>
           <li>Build components with the Vuetify UI library</li>
           <li>Introduced state management with Vuex and Pinia</li>
-          <li>Rewrote components from Options API to Composition API in order to upgrade to Vue 3</li>
+          <li>Rewrote components from Options API to Composition API for Vue 3 upgrade</li>
           <li>Unit testing with Vue Test Utils and Vitest</li>
         </ul>
 
@@ -260,7 +265,7 @@
 
         <ul class="mt-2 list-disc list-inside">
           <li>Social media management</li>
-          <li>Organizing regular cleanup events in public spaces to promote environmental awareness</li>
+          <li>Organizing cleanup events in public spaces to promote environmental awareness</li>
           <li>Promoting garbage separation and recycling at work</li>
           <li>Collecting and donating bottle caps to be sent for recycling</li>
         </ul>
@@ -270,6 +275,28 @@
 </template>
 
 <script setup>
+const contactData = ref([
+  {
+    label: 'Berlin, Germany',
+    icon: 'i-lucide-map-pin',
+  },
+  {
+    label: 'trash-mail@gmx.com',
+    icon: 'i-lucide-mail',
+    slot: 'email',
+  },
+  {
+    label: '0179 12345678',
+    icon: 'i-lucide-smartphone',
+  },
+    {
+    label: 'resume.ichbinbobby.de',
+    icon: 'i-lucide-link',
+    to: 'https://resume.ichbinbobby.de',
+    target: '_blank',
+  }
+])
+
 const isGeneratingPdf = ref(false)
 
 const downloadPdf = async () => {
@@ -312,7 +339,7 @@ const downloadPdf = async () => {
         /* Main resume container - removes min-height and adds print margins */
         .min-h-screen {
           min-height: auto !important;
-          padding: 5mm 15mm !important;
+          padding: 5mm 5mm !important;
           margin: 0 !important;
           background-color: ${cardBgColor} !important;
         }
@@ -392,7 +419,7 @@ const downloadPdf = async () => {
   /* Full bleed background with internal padding */
   .min-h-screen {
     min-height: 100vh !important;
-    padding: 5mm 15mm 20mm 15mm !important;
+    padding: 5mm 5mm 20mm 5mm !important;
     margin: 0 !important;
     box-shadow: none !important;
   }
