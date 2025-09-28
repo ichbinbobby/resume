@@ -143,7 +143,7 @@
         <h4 class="text-muted text-base mt-1">McDonald's</h4>
 
         <p class="mt-2">
-          Gained experience in customer service, teamwork and working under pressure.
+          Gained experience in customer service, teamwork and working in a hasty environment.
           Duties were taking orders, restocking and cleaning.
         </p>
       </UCard>
@@ -245,7 +245,7 @@
 
         <ul class="mt-2 list-disc list-inside">
           <li>Event planning and coordination</li>
-          <li>Crowd management with up to 400 players</li>
+          <li>Crowd management with up to 500+ attendees</li>
           <li>Public speaking</li>
           <li>Online platform moderation</li>
           <li>Communicating with game representatives about event details</li>
@@ -264,7 +264,7 @@
         <h4 class="text-muted text-base mt-1">Cleanupkollektiv</h4>
 
         <ul class="mt-2 list-disc list-inside">
-          <li>Social media management</li>
+          <li>Social media content creating and management</li>
           <li>Organizing cleanup events in public spaces to promote environmental awareness</li>
           <li>Promoting garbage separation and recycling at work</li>
           <li>Collecting and donating bottle caps to be sent for recycling</li>
