@@ -14,7 +14,7 @@ export default defineNuxtConfig({
         {
           name: "keywords",
           content:
-            "resume, frontend developer, web developer, cv, skills, vue, nuxt, javascript, html, css",
+            "resume, frontend developer, web developer, cv, skills, vue, vuetify, pinia, nuxt, javascript, html, css",
         },
         { name: "robots", content: "index, follow" },
         {
@@ -28,7 +28,7 @@ export default defineNuxtConfig({
         },
         {
           property: "og:title",
-          content: "Frontend Developer - Resume",
+          content: "Frontend Developer - Resume - Vue.js, Vuetify, Pinia",
         },
         { property: "og:type", content: "website" },
         { property: "og:url", content: "http://resume.ichbinbobby.de/" },
@@ -40,7 +40,7 @@ export default defineNuxtConfig({
         { property: "twitter:card", content: "summary_large_image" },
         {
           property: "twitter:title",
-          content: "Frontend Developer - Resume",
+          content: "Frontend Developer - Resume - Vue.js, Vuetify, Pinia",
         },
         {
           property: "twitter:description",
@@ -60,7 +60,7 @@ export default defineNuxtConfig({
         { name: "msapplication-TileColor", content: "#4CAF50" },
         { name: "msapplication-TileImage", content: "/favicon.ico" },
       ],
-      title: "Frontend Developer - Resume",
+      title: "Frontend Developer - Resume - Vue.js, Vuetify, Pinia",
     },
   },
 
