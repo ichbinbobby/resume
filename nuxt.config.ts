@@ -7,7 +7,8 @@ export default defineNuxtConfig({
         { name: "charset", content: "utf-8" },
         {
           name: "description",
-          content: "Thanh Binh Nguyen - Frontend Developer - Resume",
+          content:
+            "Frontend Developer with 5+ years of experience specializing in Vue.js and Vuetify. Explore my skills, experience, and projects.",
         },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         {
@@ -18,7 +19,8 @@ export default defineNuxtConfig({
         { name: "robots", content: "index, follow" },
         {
           property: "og:description",
-          content: "Thanh Binh Nguyen - Frontend Developer - Resume",
+          content:
+            "Frontend Developer with 5+ years of experience specializing in Vue.js and Vuetify. Explore my skills, experience, and projects.",
         },
         {
           property: "og:image",
@@ -26,24 +28,24 @@ export default defineNuxtConfig({
         },
         {
           property: "og:title",
-          content: "Thanh Binh Nguyen - Frontend Developer - Resume",
+          content: "Frontend Developer - Resume",
         },
         { property: "og:type", content: "website" },
         { property: "og:url", content: "http://resume.ichbinbobby.de/" },
         { property: "og:locale", content: "en_US" },
         {
           property: "og:site_name",
-          content: "Thanh Binh Nguyen - Frontend Developer - Resume",
+          content: "ichbinbobby",
         },
         { property: "twitter:card", content: "summary_large_image" },
-        { property: "twitter:site", content: "@yourTwitterHandle" },
         {
           property: "twitter:title",
-          content: "Thanh Binh Nguyen - Frontend Developer - Resume",
+          content: "Frontend Developer - Resume",
         },
         {
           property: "twitter:description",
-          content: "Thanh Binh Nguyen - Frontend Developer - Resume",
+          content:
+            "Frontend Developer with 5+ years of experience specializing in Vue.js and Vuetify. Explore my skills, experience, and projects.",
         },
         {
           property: "twitter:image",
@@ -58,7 +60,7 @@ export default defineNuxtConfig({
         { name: "msapplication-TileColor", content: "#4CAF50" },
         { name: "msapplication-TileImage", content: "/favicon.ico" },
       ],
-      title: "Thanh Binh Nguyen - Frontend Developer - Resume",
+      title: "Frontend Developer - Resume",
     },
   },
 
