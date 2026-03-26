@@ -95,10 +95,11 @@
         <ul class="mt-2 list-disc list-inside">
           <li>Developed and maintained company's customer care application</li>
           <li>Replaced AngularJS legacy code with Vue 2</li>
-          <li>Build components with the Vuetify UI library</li>
-          <li>Introduced state management with Vuex and Pinia</li>
-          <li>Rewrote components from Options API to Composition API for Vue 3 upgrade</li>
-          <li>Unit testing with Vue Test Utils and Vitest</li>
+          <li>Migrated application from Vue 2 to Vue 3, rewriting components from Options API to Composition API</li>
+          <li>Built components with the Vuetify UI library</li>
+          <li>Introduced state management with Vuex, later migrating to Pinia</li>
+          <li>Wrote unit tests with Vue Test Utils and Vitest</li>
+          <li>Leveraged AI-assisted development tools including Claude Code and GitHub Copilot</li>
         </ul>
 
         <USeparator class="my-4" />
