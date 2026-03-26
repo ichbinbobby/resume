@@ -80,6 +80,9 @@
               <UTooltip text="Nuxt.js">
                 <UIcon name="i-simple-icons-nuxtdotjs" class="size-5 text-green-400" />
               </UTooltip>
+              <UTooltip text="Pinia">
+                <UIcon name="i-simple-icons-pinia" class="size-5 text-green-400" />
+              </UTooltip>
             </div>
           </div>
         </template>
@@ -282,12 +285,12 @@ const contactData = ref([
     icon: 'i-lucide-map-pin',
   },
   {
-    label: 'trash-mail@gmx.com',
+    label: 'n********@gmail.com',
     icon: 'i-lucide-mail',
     slot: 'email',
   },
   {
-    label: '0179 12345678',
+    label: '0176 *****284',
     icon: 'i-lucide-smartphone',
   },
     {
