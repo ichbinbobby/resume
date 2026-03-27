@@ -58,32 +58,57 @@
 
       <UCard class="mt-6">
         <template #header>
+          <span class="text-secondary text-lg">Skills</span>
+        </template>
+
+        <div class="grid grid-cols-5 gap-3">
+          <div class="flex items-center gap-2">
+            <UIcon name="i-simple-icons-html5" class="size-5 text-orange-500 shrink-0" />
+            <span class="text-muted">HTML5</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <UIcon name="i-simple-icons-css3" class="size-5 text-blue-500 shrink-0" />
+            <span class="text-muted">CSS3</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <UIcon name="i-simple-icons-javascript" class="size-5 text-yellow-500 shrink-0" />
+            <span class="text-muted">JavaScript</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <UIcon name="i-simple-icons-git" class="size-5 text-orange-600 shrink-0" />
+            <span class="text-muted">Git</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <UIcon name="i-simple-icons-github" class="size-5 shrink-0" />
+            <span class="text-muted">GitHub</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <UIcon name="i-simple-icons-vuedotjs" class="size-5 text-green-500 shrink-0" />
+            <span class="text-muted">Vue.js</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <UIcon name="i-simple-icons-vuetify" class="size-5 text-blue-600 shrink-0" />
+            <span class="text-muted">Vuetify</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <UIcon name="i-simple-icons-pinia" class="size-5 text-yellow-400 shrink-0" />
+            <span class="text-muted">Pinia</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <UIcon name="i-simple-icons-vitest" class="size-5 text-green-400 shrink-0" />
+            <span class="text-muted">Vitest</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <UIcon name="i-simple-icons-anthropic" class="size-5 shrink-0" />
+            <span class="text-muted">Claude Code</span>
+          </div>
+        </div>
+      </UCard>
+
+      <UCard class="mt-6">
+        <template #header>
           <div class="flex justify-between items-center">
             <span class="text-secondary text-lg">Experience</span>
-
-            <div class="flex items-center gap-2">
-              <UTooltip text="HTML5">
-                <UIcon name="i-simple-icons-html5" class="size-5 text-orange-500" />
-              </UTooltip>
-              <UTooltip text="CSS3">
-                <UIcon name="i-simple-icons-css3" class="size-5 text-blue-500" />
-              </UTooltip>
-              <UTooltip text="JavaScript">
-                <UIcon name="i-simple-icons-javascript" class="size-5 text-yellow-500" />
-              </UTooltip>
-              <UTooltip text="Vue.js">
-                <UIcon name="i-simple-icons-vuedotjs" class="size-5 text-green-500" />
-              </UTooltip>
-              <UTooltip text="Vuetify">
-                <UIcon name="i-simple-icons-vuetify" class="size-5 text-blue-600" />
-              </UTooltip>
-              <UTooltip text="Nuxt.js">
-                <UIcon name="i-simple-icons-nuxtdotjs" class="size-5 text-green-400" />
-              </UTooltip>
-              <UTooltip text="Pinia">
-                <UIcon name="i-simple-icons-pinia" class="size-5 text-green-400" />
-              </UTooltip>
-            </div>
           </div>
         </template>
 
@@ -160,7 +185,7 @@
         <div class="flex justify-between items-center">
           <h3 class="text-xl">Application Developer Apprenticeship</h3>
 
-          <UBadge color="neutral" variant="outline">3 years</UBadge>
+          <UBadge color="neutral" variant="outline">2020</UBadge>
         </div>
 
         <h4 class="text-muted text-base mt-1">OSZ Informations- und Medizintechnik</h4>
@@ -170,7 +195,7 @@
         <div class="flex justify-between items-center">
           <h3 class="text-xl">Bachelor of Science in Biology</h3>
 
-          <UBadge color="neutral" variant="outline">4 years</UBadge>
+          <UBadge color="neutral" variant="outline">2016</UBadge>
         </div>
 
         <h4 class="text-muted text-base mt-1">Humboldt-Universität zu Berlin</h4>
