@@ -253,6 +253,7 @@
 
         <ul class="mt-2 list-disc list-inside">
           <li>GLS Sprachschule Berlin <UBadge color="neutral" label="2023 for 2 years" variant="soft" /></li>
+          <li>GenkiJACS Tokyo <UBadge color="neutral" label="2025 for 4 weeks" variant="soft" /></li>
           <li>GenkiJACS Tokyo <UBadge color="neutral" label="2024 for 6 weeks" variant="soft" /></li>
           <li>GenkiJACS Kyoto <UBadge color="neutral" label="2023 for 4 weeks" variant="soft" /></li>
           <li>EF Tokyo <UBadge color="neutral" label="2022 for 4 weeks" variant="soft" /></li>
