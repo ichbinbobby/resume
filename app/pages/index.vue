@@ -51,8 +51,7 @@
         </template>
 
         <p>
-          Application Developer with five years of experience in building web applications and 
-          skilled in replacing legacy code with modern framework and UI libraries.
+          Frontend Developer with 5+ years of professional experience at STRATO, specializing in Vue.js and the modernization of legacy frontend stacks. Led migrations from AngularJS through Vue 2 to Vue 3, introducing Composition API, Pinia, and unit testing practices along the way. Non-traditional background — transitioning from a B.Sc. in Biology into software development through a three-year apprenticeship.
         </p>
       </UCard>
 
@@ -115,7 +114,7 @@
         <div class="flex justify-between items-center">
           <h3 class="text-xl">Frontend Developer <UBadge label="current" /></h3>
 
-          <UBadge color="neutral" variant="outline">5+ years</UBadge>
+          <UBadge color="neutral" variant="outline">August 2020 - Present</UBadge>
         </div>
 
         <h4 class="text-muted text-base mt-1">STRATO</h4>
@@ -135,14 +134,13 @@
         <div class="flex justify-between items-center">
           <h3 class="text-xl">Application Developer Apprenticeship</h3>
 
-          <UBadge color="neutral" variant="outline">3 years</UBadge>
+          <UBadge color="neutral" variant="outline">September 2017 - August 2020</UBadge>
         </div>
 
         <h4 class="text-muted text-base mt-1">STRATO</h4>
 
         <p class="mt-2">
-          Completed a three year apprenticeship in a dual education system. Switched between different departments at the company 
-          in order to learn various topics and technologies, including Webdesign, Backend Development, Frontend Development and IT Support.
+          Completed a three-year apprenticeship in a dual education system, rotating departments every three months. Spent the majority of time in Frontend Development and Web Design with JavaScript, with additional exposure to Backend Development (Python, Django, Perl, Golang) and IT Support.
         </p>
 
         <USeparator class="my-4" />
@@ -150,7 +148,7 @@
         <div class="flex justify-between items-center">
           <h3 class="text-xl">IT Service Desk Internship</h3>
 
-          <UBadge color="neutral" variant="outline">3 months</UBadge>
+          <UBadge color="neutral" variant="outline">June 2019 - August 2019</UBadge>
         </div>
 
         <h4 class="text-muted text-base mt-1">Health Service Executive</h4>
@@ -158,7 +156,7 @@
         <p class="mt-2">
           Completed a three month internship abroad in the IT Service Desk as part of the Erasmus+ program. Gained hands-on experience in 
           giving technical and telephonic assistance to employees, mainly exchanging hardware, installing network printers, connecting ports 
-          on the patch panel, troubleshooting and setting up new monitors. Improved foreign language and communication skills.
+          on the patch panel, troubleshooting and setting up new monitors.
         </p>
 
         <USeparator class="my-4" />
@@ -166,13 +164,13 @@
         <div class="flex justify-between items-center">
           <h3 class="text-xl">Restaurant Employee</h3>
 
-          <UBadge color="neutral" variant="outline">2.5 years</UBadge>
+          <UBadge color="neutral" variant="outline">March 2015 - August 2017</UBadge>
         </div>
 
         <h4 class="text-muted text-base mt-1">McDonald's</h4>
 
         <p class="mt-2">
-          Gained experience in customer service, teamwork and working in a hasty environment.
+          Gained experience in customer service, teamwork and working in a fast-paced environment.
           Duties were taking orders, restocking and cleaning.
         </p>
       </UCard>
@@ -299,6 +297,31 @@
           <li>Promoting garbage separation and recycling at work</li>
           <li>Collecting and donating bottle caps to be sent for recycling</li>
         </ul>
+      </UCard>
+
+      <UCard class="mt-6">
+        <template #header>
+          <div class="flex justify-between items-center">
+            <span class="text-secondary text-lg">Projects</span>
+            <UButton icon="i-simple-icons-github" color="neutral" target="_blank" to="https://github.com/ichbinbobby/wurzelheim.de" variant="subtle" />
+          </div>
+        </template>
+
+        <div class="flex justify-between items-center">
+          <h3 class="text-xl">Pokémon GO Code Card Generator</h3>
+          <UButton color="neutral" variant="subtle" size="sm" target="_blank" to="https://wurzelheim.de/code-card-generator" label="wurzelheim.de" trailing-icon="i-lucide-external-link" />
+        </div>
+
+        <p class="mt-2">
+          Built a web-based tool used by Pokémon GO community ambassadors to distribute monthly promotional codes. Accepts comma-separated code batches and generates customizable, print-ready PDF card sheets (24 cards per A4 page) with QR codes, custom logos, and double-sided print support.
+        </p>
+
+        <div class="flex gap-2 mt-3">
+          <UBadge color="neutral" variant="soft" label="Vue 3" />
+          <UBadge color="neutral" variant="soft" label="Nuxt 3" />
+          <UBadge color="neutral" variant="soft" label="Vuetify" />
+          <UBadge color="neutral" variant="soft" label="TypeScript" />
+        </div>
       </UCard>
     </UContainer>
   </div>
