@@ -1,0 +1,120 @@
+{
+  "title": "Resume",
+  "tooltips": {
+    "downloadPdf": "Download PDF",
+    "toggleDarkMode": "Toggle Dark Mode",
+    "githubProfile": "GitHub Profile",
+    "linkedinProfile": "LinkedIn Profile",
+    "cleanupInstagram": "Instagram page of Cleanupkollektiv"
+  },
+  "sections": {
+    "summary": "Summary",
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education",
+    "languageExperience": "Language Experience",
+    "volunteerExperience": "Volunteer Experience",
+    "projects": "Projects"
+  },
+  "contact": {
+    "location": "Berlin, Germany"
+  },
+  "badges": {
+    "current": "current"
+  },
+  "summary": "Frontend Developer with 5+ years of professional experience at STRATO, specializing in Vue.js and the modernization of legacy frontend stacks. Led migrations from AngularJS through Vue 2 to Vue 3, introducing Composition API, Pinia, and unit testing practices along the way. Non-traditional background — transitioning from a B.Sc. in Biology into software development through a three-year apprenticeship.",
+  "experience": {
+    "frontendDeveloper": {
+      "title": "Frontend Developer",
+      "period": "August 2020 - Present",
+      "bullets": {
+        "0": "Developed and maintained company's customer care application",
+        "1": "Replaced AngularJS legacy code with Vue 2",
+        "2": "Migrated application from Vue 2 to Vue 3, rewriting components from Options API to Composition API",
+        "3": "Built components with the Vuetify UI library",
+        "4": "Introduced state management with Vuex, later migrating to Pinia",
+        "5": "Wrote unit tests with Vue Test Utils and Vitest",
+        "6": "Leveraged AI-assisted development tools including Claude Code and GitHub Copilot"
+      }
+    },
+    "apprenticeship": {
+      "title": "Application Developer Apprenticeship",
+      "period": "September 2017 - August 2020",
+      "description": "Completed a three-year apprenticeship in a dual education system, rotating departments every three months. Spent the majority of time in Frontend Development and Web Design with JavaScript, with additional exposure to Backend Development (Python, Django, Perl, Golang) and IT Support."
+    },
+    "itInternship": {
+      "title": "IT Service Desk Internship",
+      "period": "June 2019 - August 2019",
+      "description": "Completed a three month internship abroad in the IT Service Desk as part of the Erasmus+ program. Gained hands-on experience in giving technical and telephonic assistance to employees, mainly exchanging hardware, installing network printers, connecting ports on the patch panel, troubleshooting and setting up new monitors."
+    },
+    "mcdonalds": {
+      "title": "Restaurant Employee",
+      "period": "March 2015 - August 2017",
+      "description": "Gained experience in customer service, teamwork and working in a fast-paced environment. Duties were taking orders, restocking and cleaning."
+    }
+  },
+  "education": {
+    "apprenticeship": "Application Developer Apprenticeship",
+    "bachelor": "Bachelor of Science in Biology",
+    "abitur": "Abitur"
+  },
+  "languages": {
+    "german": "German",
+    "motherTongue": "Mother Tongue",
+    "english": "English",
+    "c1Level": "C1 Level",
+    "japanese": "Japanese",
+    "a1Level": "A1 Level",
+    "englishExperience": {
+      "dublin": "IT Service Desk Internship in Dublin",
+      "belfast": "International House Belfast",
+      "glasgow": "Glasgow School of English",
+      "kentucky": "High School Year in Kentucky"
+    },
+    "japaneseExperience": {
+      "glsBerlin": "GLS Sprachschule Berlin",
+      "genkiTokyo2025": "GenkiJACS Tokyo",
+      "genkiTokyo2024": "GenkiJACS Tokyo",
+      "genkiKyoto": "GenkiJACS Kyoto",
+      "efTokyo": "EF Tokyo"
+    },
+    "durations": {
+      "dublin": "2019 for 3 months",
+      "belfast": "2019 for 2 weeks",
+      "glasgow": "2018 for 2 weeks",
+      "kentucky": "2009/2010 for 1 year",
+      "glsBerlin": "2023 for 2 years",
+      "genkiTokyo2025": "2025 for 4 weeks",
+      "genkiTokyo2024": "2024 for 6 weeks",
+      "genkiKyoto": "2023 for 4 weeks",
+      "efTokyo": "2022 for 4 weeks"
+    }
+  },
+  "volunteer": {
+    "ambassador": {
+      "title": "Pokemon GO Community Ambassador",
+      "bullets": {
+        "0": "Event planning and coordination",
+        "1": "Crowd management with up to 500+ attendees",
+        "2": "Public speaking",
+        "3": "Online platform moderation",
+        "4": "Communicating with game representatives about event details"
+      }
+    },
+    "cleanup": {
+      "title": "Cleanup Organizer",
+      "bullets": {
+        "0": "Social media content creating and management",
+        "1": "Organizing cleanup events in public spaces to promote environmental awareness",
+        "2": "Promoting garbage separation and recycling at work",
+        "3": "Collecting and donating bottle caps to be sent for recycling"
+      }
+    }
+  },
+  "projects": {
+    "codeCardGenerator": {
+      "title": "Pokémon GO Code Card Generator",
+      "description": "Built a web-based tool used by Pokémon GO community ambassadors to distribute monthly promotional codes. Accepts comma-separated code batches and generates customizable, print-ready PDF card sheets (24 cards per A4 page) with QR codes, custom logos, and double-sided print support."
+    }
+  }
+}

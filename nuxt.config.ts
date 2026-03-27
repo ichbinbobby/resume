@@ -66,7 +66,17 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  modules: ["@nuxt/ui", "@nuxt/eslint", "@nuxtjs/color-mode"],
+  modules: ["@nuxt/ui", "@nuxt/eslint", "@nuxtjs/color-mode", "@nuxtjs/i18n"],
+
+  i18n: {
+    locales: [
+      { code: 'en', language: 'en-US', file: 'en.json' },
+      { code: 'de', language: 'de-DE', file: 'de.json' }
+    ],
+    defaultLocale: 'en',
+    lazy: true,
+    langDir: 'locales'
+  },
 
   css: ["~/assets/css/main.css"],
 

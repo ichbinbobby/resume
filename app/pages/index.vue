@@ -3,61 +3,66 @@
     <UContainer class="py-8 px-6">
       <div class="flex justify-between items-center">
         <div>
-          <h1 class="text-primary text-4xl mt-4">Resume</h1>
+          <h1 class="text-primary text-4xl mt-4">{{ $t('title') }}</h1>
         </div>
 
         <div class="flex items-center gap-2">
-          <UTooltip text="Download PDF">
-            <UButton 
+          <UTooltip :text="$t('tooltips.downloadPdf')">
+            <UButton
               icon="i-lucide-download"
-              color="primary" 
+              color="primary"
               variant="subtle"
               :loading="isGeneratingPdf"
               @click="downloadPdf"
             />
           </UTooltip>
-          
-          <UTooltip text="Toggle Dark Mode">
-            <UButton 
+
+          <UTooltip :text="$t('tooltips.toggleDarkMode')">
+            <UButton
               :icon="$colorMode.value === 'dark' ? 'i-lucide-sun' : 'i-lucide-moon'"
-              color="neutral" 
+              color="neutral"
               variant="subtle"
               @click="$colorMode.preference = $colorMode.value === 'dark' ? 'light' : 'dark'"
             />
           </UTooltip>
+
+          <UButton
+            color="neutral"
+            variant="subtle"
+            :label="locale === 'en' ? 'DE' : 'EN'"
+            @click="setLocale(locale === 'en' ? 'de' : 'en')"
+          />
         </div>
       </div>
 
-      <UBreadcrumb class="mt-2" :items="contactData" >
+      <UBreadcrumb class="mt-2" :items="contactData">
         <template #separator>
           <span class="mx-2 text-muted" />
         </template>
       </UBreadcrumb>
 
-      <UCard class="mt-6">
+      <UCard class="mt-6 resume-card">
         <template #header>
           <div class="flex justify-between items-center">
-            <span class="text-secondary text-lg">Summary</span>
-            
+            <span class="text-secondary text-lg">{{ $t('sections.summary') }}</span>
+
             <div class="flex items-center gap-2">
-              <UTooltip text="GitHub Profile">
+              <UTooltip :text="$t('tooltips.githubProfile')">
                 <UButton icon="i-simple-icons-github" color="neutral" target="_blank" to="https://github.com/ichbinbobby" variant="subtle" />
               </UTooltip>
-              <UTooltip text="LinkedIn Profile">
+              <UTooltip :text="$t('tooltips.linkedinProfile')">
                 <UButton icon="i-simple-icons-linkedin" color="neutral" target="_blank" to="https://www.linkedin.com/in/ichbinbobby/" variant="subtle" />
               </UTooltip>
             </div>
           </div>
         </template>
 
-        <p>
-          Frontend Developer with 5+ years of professional experience at STRATO, specializing in Vue.js and the modernization of legacy frontend stacks. Led migrations from AngularJS through Vue 2 to Vue 3, introducing Composition API, Pinia, and unit testing practices along the way. Non-traditional background — transitioning from a B.Sc. in Biology into software development through a three-year apprenticeship.
-        </p>
+        <p>{{ $t('summary') }}</p>
       </UCard>
 
-      <UCard class="mt-6">
+      <UCard class="mt-6 resume-card">
         <template #header>
-          <span class="text-secondary text-lg">Skills</span>
+          <span class="text-secondary text-lg">{{ $t('sections.skills') }}</span>
         </template>
 
         <div class="grid grid-cols-5 gap-3">
@@ -99,90 +104,74 @@
           </div>
           <div class="flex items-center gap-2">
             <UIcon name="i-simple-icons-anthropic" class="size-5 shrink-0" />
-            <span class="text-muted">Claude Code</span>
+            <span class="text-muted whitespace-nowrap">Claude Code</span>
           </div>
         </div>
       </UCard>
 
-      <UCard class="mt-6">
+      <UCard class="mt-6 resume-card print-page-break">
         <template #header>
-          <div class="flex justify-between items-center">
-            <span class="text-secondary text-lg">Experience</span>
-          </div>
+          <span class="text-secondary text-lg">{{ $t('sections.experience') }}</span>
         </template>
 
         <div class="flex justify-between items-center">
-          <h3 class="text-xl">Frontend Developer <UBadge label="current" /></h3>
-
-          <UBadge color="neutral" variant="outline">August 2020 - Present</UBadge>
+          <h3 class="text-xl">{{ $t('experience.frontendDeveloper.title') }} <UBadge :label="$t('badges.current')" /></h3>
+          <UBadge color="neutral" variant="outline">{{ $t('experience.frontendDeveloper.period') }}</UBadge>
         </div>
 
         <h4 class="text-muted text-base mt-1">STRATO</h4>
 
         <ul class="mt-2 list-disc list-inside">
-          <li>Developed and maintained company's customer care application</li>
-          <li>Replaced AngularJS legacy code with Vue 2</li>
-          <li>Migrated application from Vue 2 to Vue 3, rewriting components from Options API to Composition API</li>
-          <li>Built components with the Vuetify UI library</li>
-          <li>Introduced state management with Vuex, later migrating to Pinia</li>
-          <li>Wrote unit tests with Vue Test Utils and Vitest</li>
-          <li>Leveraged AI-assisted development tools including Claude Code and GitHub Copilot</li>
+          <li>{{ $t('experience.frontendDeveloper.bullets.0') }}</li>
+          <li>{{ $t('experience.frontendDeveloper.bullets.1') }}</li>
+          <li>{{ $t('experience.frontendDeveloper.bullets.2') }}</li>
+          <li>{{ $t('experience.frontendDeveloper.bullets.3') }}</li>
+          <li>{{ $t('experience.frontendDeveloper.bullets.4') }}</li>
+          <li>{{ $t('experience.frontendDeveloper.bullets.5') }}</li>
+          <li>{{ $t('experience.frontendDeveloper.bullets.6') }}</li>
         </ul>
 
         <USeparator class="my-4" />
 
         <div class="flex justify-between items-center">
-          <h3 class="text-xl">Application Developer Apprenticeship</h3>
-
-          <UBadge color="neutral" variant="outline">September 2017 - August 2020</UBadge>
+          <h3 class="text-xl">{{ $t('experience.apprenticeship.title') }}</h3>
+          <UBadge color="neutral" variant="outline">{{ $t('experience.apprenticeship.period') }}</UBadge>
         </div>
 
         <h4 class="text-muted text-base mt-1">STRATO</h4>
 
-        <p class="mt-2">
-          Completed a three-year apprenticeship in a dual education system, rotating departments every three months. Spent the majority of time in Frontend Development and Web Design with JavaScript, with additional exposure to Backend Development (Python, Django, Perl, Golang) and IT Support.
-        </p>
+        <p class="mt-2">{{ $t('experience.apprenticeship.description') }}</p>
 
         <USeparator class="my-4" />
 
         <div class="flex justify-between items-center">
-          <h3 class="text-xl">IT Service Desk Internship</h3>
-
-          <UBadge color="neutral" variant="outline">June 2019 - August 2019</UBadge>
+          <h3 class="text-xl">{{ $t('experience.itInternship.title') }}</h3>
+          <UBadge color="neutral" variant="outline">{{ $t('experience.itInternship.period') }}</UBadge>
         </div>
 
         <h4 class="text-muted text-base mt-1">Health Service Executive</h4>
 
-        <p class="mt-2">
-          Completed a three month internship abroad in the IT Service Desk as part of the Erasmus+ program. Gained hands-on experience in 
-          giving technical and telephonic assistance to employees, mainly exchanging hardware, installing network printers, connecting ports 
-          on the patch panel, troubleshooting and setting up new monitors.
-        </p>
+        <p class="mt-2">{{ $t('experience.itInternship.description') }}</p>
 
         <USeparator class="my-4" />
 
         <div class="flex justify-between items-center">
-          <h3 class="text-xl">Restaurant Employee</h3>
-
-          <UBadge color="neutral" variant="outline">March 2015 - August 2017</UBadge>
+          <h3 class="text-xl">{{ $t('experience.mcdonalds.title') }}</h3>
+          <UBadge color="neutral" variant="outline">{{ $t('experience.mcdonalds.period') }}</UBadge>
         </div>
 
         <h4 class="text-muted text-base mt-1">McDonald's</h4>
 
-        <p class="mt-2">
-          Gained experience in customer service, teamwork and working in a fast-paced environment.
-          Duties were taking orders, restocking and cleaning.
-        </p>
+        <p class="mt-2">{{ $t('experience.mcdonalds.description') }}</p>
       </UCard>
 
-      <UCard class="mt-6">
+      <UCard class="mt-6 resume-card print-page-break">
         <template #header>
-          <span class="text-secondary text-lg">Education</span>
+          <span class="text-secondary text-lg">{{ $t('sections.education') }}</span>
         </template>
 
         <div class="flex justify-between items-center">
-          <h3 class="text-xl">Application Developer Apprenticeship</h3>
-
+          <h3 class="text-xl">{{ $t('education.apprenticeship') }}</h3>
           <UBadge color="neutral" variant="outline">2020</UBadge>
         </div>
 
@@ -191,8 +180,7 @@
         <USeparator class="my-4" />
 
         <div class="flex justify-between items-center">
-          <h3 class="text-xl">Bachelor of Science in Biology</h3>
-
+          <h3 class="text-xl">{{ $t('education.bachelor') }}</h3>
           <UBadge color="neutral" variant="outline">2016</UBadge>
         </div>
 
@@ -201,90 +189,83 @@
         <USeparator class="my-4" />
 
         <div class="flex justify-between items-center">
-          <h3 class="text-xl">Abitur</h3>
-
+          <h3 class="text-xl">{{ $t('education.abitur') }}</h3>
           <UBadge color="neutral" variant="outline">2012</UBadge>
         </div>
 
         <h4 class="text-muted text-base mt-1">Max-Planck-Gymnasium Berlin</h4>
       </UCard>
 
-      <UCard class="mt-6">
+      <UCard class="mt-6 resume-card">
         <template #header>
-          <span class="text-secondary text-lg">Language Experience</span>
+          <span class="text-secondary text-lg">{{ $t('sections.languageExperience') }}</span>
         </template>
 
         <div class="flex justify-between items-center">
-          <h3 class="text-xl">German</h3>
-          
+          <h3 class="text-xl">{{ $t('languages.german') }}</h3>
           <UIcon name="i-twemoji-flag-germany" class="size-6" />
         </div>
 
-        <h4 class="text-muted text-base mt-1">Mother Tongue</h4>
+        <h4 class="text-muted text-base mt-1">{{ $t('languages.motherTongue') }}</h4>
 
         <USeparator class="my-4" />
 
         <div class="flex justify-between items-center">
-          <h3 class="text-xl">English</h3>
-
+          <h3 class="text-xl">{{ $t('languages.english') }}</h3>
           <UIcon name="i-twemoji-flag-united-kingdom" class="size-6" />
         </div>
 
-        <h4 class="text-muted text-base mt-1">C1 Level</h4>
+        <h4 class="text-muted text-base mt-1">{{ $t('languages.c1Level') }}</h4>
 
         <ul class="mt-2 list-disc list-inside">
-          <li>IT Service Desk Internship in Dublin <UBadge color="neutral" label="2019 for 3 months" variant="soft" /></li>
-          <li>International House Belfast <UBadge color="neutral" label="2019 for 2 weeks" variant="soft" /></li>
-          <li>Glasgow School of English <UBadge color="neutral" label="2018 for 2 weeks" variant="soft" /></li>
-          <li>High School Year in Kentucky <UBadge color="neutral" label="2009/2010 for 1 year" variant="soft" /></li>
+          <li>{{ $t('languages.englishExperience.dublin') }} <UBadge color="neutral" :label="$t('languages.durations.dublin')" variant="soft" /></li>
+          <li>{{ $t('languages.englishExperience.belfast') }} <UBadge color="neutral" :label="$t('languages.durations.belfast')" variant="soft" /></li>
+          <li>{{ $t('languages.englishExperience.glasgow') }} <UBadge color="neutral" :label="$t('languages.durations.glasgow')" variant="soft" /></li>
+          <li>{{ $t('languages.englishExperience.kentucky') }} <UBadge color="neutral" :label="$t('languages.durations.kentucky')" variant="soft" /></li>
         </ul>
 
         <USeparator class="my-4" />
 
         <div class="flex justify-between items-center">
-          <h3 class="text-xl">Japanese</h3>
-
+          <h3 class="text-xl">{{ $t('languages.japanese') }}</h3>
           <UIcon name="i-twemoji-flag-japan" class="size-6" />
         </div>
 
-        <h4 class="text-muted text-base mt-1">A1 Level</h4>
+        <h4 class="text-muted text-base mt-1">{{ $t('languages.a1Level') }}</h4>
 
         <ul class="mt-2 list-disc list-inside">
-          <li>GLS Sprachschule Berlin <UBadge color="neutral" label="2023 for 2 years" variant="soft" /></li>
-          <li>GenkiJACS Tokyo <UBadge color="neutral" label="2025 for 4 weeks" variant="soft" /></li>
-          <li>GenkiJACS Tokyo <UBadge color="neutral" label="2024 for 6 weeks" variant="soft" /></li>
-          <li>GenkiJACS Kyoto <UBadge color="neutral" label="2023 for 4 weeks" variant="soft" /></li>
-          <li>EF Tokyo <UBadge color="neutral" label="2022 for 4 weeks" variant="soft" /></li>
+          <li>{{ $t('languages.japaneseExperience.glsBerlin') }} <UBadge color="neutral" :label="$t('languages.durations.glsBerlin')" variant="soft" /></li>
+          <li>{{ $t('languages.japaneseExperience.genkiTokyo2025') }} <UBadge color="neutral" :label="$t('languages.durations.genkiTokyo2025')" variant="soft" /></li>
+          <li>{{ $t('languages.japaneseExperience.genkiTokyo2024') }} <UBadge color="neutral" :label="$t('languages.durations.genkiTokyo2024')" variant="soft" /></li>
+          <li>{{ $t('languages.japaneseExperience.genkiKyoto') }} <UBadge color="neutral" :label="$t('languages.durations.genkiKyoto')" variant="soft" /></li>
+          <li>{{ $t('languages.japaneseExperience.efTokyo') }} <UBadge color="neutral" :label="$t('languages.durations.efTokyo')" variant="soft" /></li>
         </ul>
       </UCard>
 
-      <div class="page-break-spacer" />
-      
-      <UCard class="my-6">
+      <UCard class="mt-6 resume-card print-page-break">
         <template #header>
-          <span class="text-secondary text-lg">Volunteer Experience</span>
+          <span class="text-secondary text-lg">{{ $t('sections.volunteerExperience') }}</span>
         </template>
 
         <div class="flex justify-between items-center">
-          <h3 class="text-xl">Pokemon GO Community Ambassador</h3>
+          <h3 class="text-xl">{{ $t('volunteer.ambassador.title') }}</h3>
         </div>
 
         <h4 class="text-muted text-base mt-1">Alexanderplatz</h4>
 
         <ul class="mt-2 list-disc list-inside">
-          <li>Event planning and coordination</li>
-          <li>Crowd management with up to 500+ attendees</li>
-          <li>Public speaking</li>
-          <li>Online platform moderation</li>
-          <li>Communicating with game representatives about event details</li>
+          <li>{{ $t('volunteer.ambassador.bullets.0') }}</li>
+          <li>{{ $t('volunteer.ambassador.bullets.1') }}</li>
+          <li>{{ $t('volunteer.ambassador.bullets.2') }}</li>
+          <li>{{ $t('volunteer.ambassador.bullets.3') }}</li>
+          <li>{{ $t('volunteer.ambassador.bullets.4') }}</li>
         </ul>
 
         <USeparator class="my-4" />
 
         <div class="flex justify-between items-center">
-          <h3 class="text-xl">Cleanup Organizer</h3>
-
-          <UTooltip text="Instagram page of Cleanupkollektiv">
+          <h3 class="text-xl">{{ $t('volunteer.cleanup.title') }}</h3>
+          <UTooltip :text="$t('tooltips.cleanupInstagram')">
             <UButton icon="i-simple-icons-instagram" color="neutral" target="_blank" to="https://www.instagram.com/cleanupkollektiv/" variant="subtle" />
           </UTooltip>
         </div>
@@ -292,29 +273,27 @@
         <h4 class="text-muted text-base mt-1">Cleanupkollektiv</h4>
 
         <ul class="mt-2 list-disc list-inside">
-          <li>Social media content creating and management</li>
-          <li>Organizing cleanup events in public spaces to promote environmental awareness</li>
-          <li>Promoting garbage separation and recycling at work</li>
-          <li>Collecting and donating bottle caps to be sent for recycling</li>
+          <li>{{ $t('volunteer.cleanup.bullets.0') }}</li>
+          <li>{{ $t('volunteer.cleanup.bullets.1') }}</li>
+          <li>{{ $t('volunteer.cleanup.bullets.2') }}</li>
+          <li>{{ $t('volunteer.cleanup.bullets.3') }}</li>
         </ul>
       </UCard>
 
-      <UCard class="mt-6">
+      <UCard class="mt-6 resume-card">
         <template #header>
           <div class="flex justify-between items-center">
-            <span class="text-secondary text-lg">Projects</span>
+            <span class="text-secondary text-lg">{{ $t('sections.projects') }}</span>
             <UButton icon="i-simple-icons-github" color="neutral" target="_blank" to="https://github.com/ichbinbobby/wurzelheim.de" variant="subtle" />
           </div>
         </template>
 
         <div class="flex justify-between items-center">
-          <h3 class="text-xl">Pokémon GO Code Card Generator</h3>
+          <h3 class="text-xl">{{ $t('projects.codeCardGenerator.title') }}</h3>
           <UButton color="neutral" variant="subtle" size="sm" target="_blank" to="https://wurzelheim.de/code-card-generator" label="wurzelheim.de" trailing-icon="i-lucide-external-link" />
         </div>
 
-        <p class="mt-2">
-          Built a web-based tool used by Pokémon GO community ambassadors to distribute monthly promotional codes. Accepts comma-separated code batches and generates customizable, print-ready PDF card sheets (24 cards per A4 page) with QR codes, custom logos, and double-sided print support.
-        </p>
+        <p class="mt-2">{{ $t('projects.codeCardGenerator.description') }}</p>
 
         <div class="flex gap-2 mt-3">
           <UBadge color="neutral" variant="soft" label="Vue 3" />
@@ -328,9 +307,12 @@
 </template>
 
 <script setup>
-const contactData = ref([
+const { locale, setLocale } = useI18n()
+const { t } = useI18n()
+
+const contactData = computed(() => [
   {
-    label: 'Berlin, Germany',
+    label: t('contact.location'),
     icon: 'i-lucide-map-pin',
   },
   {
@@ -342,7 +324,7 @@ const contactData = ref([
     label: '0176 *****284',
     icon: 'i-lucide-smartphone',
   },
-    {
+  {
     label: 'resume.ichbinbobby.de',
     icon: 'i-lucide-link',
     to: 'https://resume.ichbinbobby.de',
@@ -354,33 +336,27 @@ const isGeneratingPdf = ref(false)
 
 const downloadPdf = async () => {
   isGeneratingPdf.value = true
-  
+
   try {
-    // Get the actual card background color from a real card element
     const sampleCard = document.querySelector('[class*="bg-card"]') || document.querySelector('div[class*="UCard"]') || document.querySelector('.mt-6')
     const cardBgColor = sampleCard ? getComputedStyle(sampleCard).backgroundColor : (document.documentElement.classList.contains('dark') ? 'rgb(39, 39, 42)' : 'rgb(255, 255, 255)')
-    
-    // Add print-specific styles temporarily
+
     const printStyles = document.createElement('style')
     printStyles.textContent = `
       @media print {
-        /* Remove default page margins and set A4 size */
         @page {
           margin: 0;
           size: A4;
         }
-        
-        /* Hide all content by default for selective printing */
+
         body * {
           visibility: hidden;
         }
-        
-        /* Show only print-area content and its children */
+
         .print-area, .print-area * {
           visibility: visible;
         }
-        
-        /* Container for print content - positioned absolutely to control layout */
+
         .print-area {
           position: absolute;
           left: 0;
@@ -388,48 +364,41 @@ const downloadPdf = async () => {
           width: 100%;
           background-color: ${cardBgColor} !important;
         }
-        
-        /* Main resume container - removes min-height and adds print margins */
+
         .min-h-screen {
           min-height: auto !important;
           padding: 5mm 5mm !important;
           margin: 0 !important;
           background-color: ${cardBgColor} !important;
         }
-        
-        /* Remove top margin from main title for better print layout */
+
         h1 {
           margin-top: 0 !important;
           padding-top: 0 !important;
         }
-        
-        /* Ensure all card components match the background color */
+
         [class*="card"], .bg-card, [class*="UCard"] {
           background-color: ${cardBgColor} !important;
         }
-        
-        /* Override background color for main wrapper */
+
         .bg-background {
           background-color: ${cardBgColor} !important;
         }
       }
     `
-    
+
     document.head.appendChild(printStyles)
-    
-    // Add print-area class to the resume container
+
     const resumeContainer = document.querySelector('.min-h-screen')
     resumeContainer.classList.add('print-area')
-    
-    // Trigger print
+
     window.print()
-    
-    // Clean up after print dialog
+
     setTimeout(() => {
       document.head.removeChild(printStyles)
       resumeContainer.classList.remove('print-area')
     }, 1000)
-    
+
   } catch (error) {
     alert('Error: ' + error.message)
   } finally {
@@ -439,61 +408,49 @@ const downloadPdf = async () => {
 </script>
 
 <style>
-/* Ensure full page background color for PDF generation and remove browser headers */
 @media print {
   @page {
     size: A4;
-    margin: 0;
+    margin: 8mm 0;
   }
-  
+
   html, body {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
     margin: 0;
     padding: 0;
   }
-  
+
   *, *::before, *::after {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
-  
-  /* Hide browser print headers and footers */
-  @page {
-    margin: 0;
-    @top-left { content: ""; }
-    @top-center { content: ""; }
-    @top-right { content: ""; }
-    @bottom-left { content: ""; }
-    @bottom-center { content: ""; }
-    @bottom-right { content: ""; }
-  }
-  
-  /* Full bleed background with internal padding */
+
   .min-h-screen {
     min-height: 100vh !important;
     padding: 5mm 5mm 20mm 5mm !important;
     margin: 0 !important;
     box-shadow: none !important;
   }
-  
-  /* Reduce title spacing */
+
   h1 {
     margin-top: 0 !important;
     padding-top: 0 !important;
   }
-  
-  /* Page break controls */
+
   .page-break-spacer {
     page-break-before: always !important;
     height: 15mm !important;
     margin: 0 !important;
     padding: 0 !important;
   }
-  
-  /* Prevent cards from breaking across pages */
+
   [class*="UCard"], .bg-card {
     page-break-inside: avoid;
+  }
+
+  .print-page-break {
+    break-before: page;
   }
 }
 </style>

@@ -1,0 +1,120 @@
+{
+  "title": "Lebenslauf",
+  "tooltips": {
+    "downloadPdf": "PDF herunterladen",
+    "toggleDarkMode": "Dunkelmodus umschalten",
+    "githubProfile": "GitHub-Profil",
+    "linkedinProfile": "LinkedIn-Profil",
+    "cleanupInstagram": "Instagram-Seite von Cleanupkollektiv"
+  },
+  "sections": {
+    "summary": "Zusammenfassung",
+    "skills": "Kenntnisse",
+    "experience": "Berufserfahrung",
+    "education": "Ausbildung",
+    "languageExperience": "Sprachkenntnisse",
+    "volunteerExperience": "Ehrenamtliche Erfahrung",
+    "projects": "Projekte"
+  },
+  "contact": {
+    "location": "Berlin, Deutschland"
+  },
+  "badges": {
+    "current": "aktuell"
+  },
+  "summary": "Frontend-Entwickler mit über 5 Jahren Berufserfahrung bei STRATO, spezialisiert auf Vue.js und die Modernisierung bestehender Frontend-Stacks. Verantwortlich für Migrationen von AngularJS über Vue 2 zu Vue 3, einschließlich der Einführung der Composition API, Pinia und Unit-Testing-Praktiken. Unkonventioneller Werdegang — Wechsel von einem B.Sc. in Biologie in die Softwareentwicklung durch eine dreijährige Berufsausbildung.",
+  "experience": {
+    "frontendDeveloper": {
+      "title": "Frontend-Entwickler",
+      "period": "August 2020 – Heute",
+      "bullets": {
+        "0": "Entwicklung und Pflege der internen Kundenbetreuungsanwendung des Unternehmens",
+        "1": "Ablösung von AngularJS-Legacy-Code durch Vue 2",
+        "2": "Migration der Anwendung von Vue 2 zu Vue 3, einschließlich der Umstellung von der Options API auf die Composition API",
+        "3": "Entwicklung von Komponenten mit der Vuetify UI-Bibliothek",
+        "4": "Einführung von State Management mit Vuex, später Migration zu Pinia",
+        "5": "Schreiben von Unit-Tests mit Vue Test Utils und Vitest",
+        "6": "Einsatz von KI-gestützten Entwicklungstools wie Claude Code und GitHub Copilot"
+      }
+    },
+    "apprenticeship": {
+      "title": "Ausbildung zum Fachinformatiker Anwendungsentwicklung",
+      "period": "September 2017 – August 2020",
+      "description": "Abschluss einer dreijährigen Ausbildung im dualen System mit Abteilungsrotation alle drei Monate. Schwerpunkt lag auf Frontend-Entwicklung und Webdesign mit JavaScript, ergänzt durch Einblicke in Backend-Entwicklung (Python, Django, Perl, Golang) und IT-Support."
+    },
+    "itInternship": {
+      "title": "IT-Service-Desk-Praktikum",
+      "period": "Juni 2019 – August 2019",
+      "description": "Dreimonatiges Praktikum im IT-Service-Desk im Rahmen des Erasmus+-Programms. Praktische Erfahrungen in der technischen und telefonischen Unterstützung von Mitarbeitenden, u. a. beim Austausch von Hardware, der Installation von Netzwerkdruckern, der Verbindung von Ports am Patchpanel sowie der Einrichtung neuer Monitore."
+    },
+    "mcdonalds": {
+      "title": "Restaurantmitarbeiter",
+      "period": "März 2015 – August 2017",
+      "description": "Erfahrungen in Kundenservice, Teamarbeit und dem Arbeiten in einem schnelllebigen Umfeld gesammelt. Aufgaben umfassten die Aufnahme von Bestellungen, das Auffüllen von Vorräten und die Reinigung."
+    }
+  },
+  "education": {
+    "apprenticeship": "Ausbildung zum Fachinformatiker Anwendungsentwicklung",
+    "bachelor": "Bachelor of Science in Biologie",
+    "abitur": "Abitur"
+  },
+  "languages": {
+    "german": "Deutsch",
+    "motherTongue": "Muttersprache",
+    "english": "Englisch",
+    "c1Level": "C1-Niveau",
+    "japanese": "Japanisch",
+    "a1Level": "A1-Niveau",
+    "englishExperience": {
+      "dublin": "IT-Service-Desk-Praktikum in Dublin",
+      "belfast": "International House Belfast",
+      "glasgow": "Glasgow School of English",
+      "kentucky": "Austauschjahr in Kentucky"
+    },
+    "japaneseExperience": {
+      "glsBerlin": "GLS Sprachschule Berlin",
+      "genkiTokyo2025": "GenkiJACS Tokyo",
+      "genkiTokyo2024": "GenkiJACS Tokyo",
+      "genkiKyoto": "GenkiJACS Kyoto",
+      "efTokyo": "EF Tokyo"
+    },
+    "durations": {
+      "dublin": "2019, 3 Monate",
+      "belfast": "2019, 2 Wochen",
+      "glasgow": "2018, 2 Wochen",
+      "kentucky": "2009/2010, 1 Jahr",
+      "glsBerlin": "2023, 2 Jahre",
+      "genkiTokyo2025": "2025, 4 Wochen",
+      "genkiTokyo2024": "2024, 6 Wochen",
+      "genkiKyoto": "2023, 4 Wochen",
+      "efTokyo": "2022, 4 Wochen"
+    }
+  },
+  "volunteer": {
+    "ambassador": {
+      "title": "Pokémon GO Community-Ambassador",
+      "bullets": {
+        "0": "Veranstaltungsplanung und -koordination",
+        "1": "Besuchermanagement bei bis zu 500+ Teilnehmenden",
+        "2": "Öffentliches Sprechen",
+        "3": "Moderation von Online-Plattformen",
+        "4": "Kommunikation mit Spielrepräsentanten zu Veranstaltungsdetails"
+      }
+    },
+    "cleanup": {
+      "title": "Organisator von Aufräumaktionen",
+      "bullets": {
+        "0": "Erstellung und Verwaltung von Social-Media-Inhalten",
+        "1": "Organisation von Müllsammelaktionen im öffentlichen Raum zur Förderung des Umweltbewusstseins",
+        "2": "Förderung von Mülltrennung und Recycling am Arbeitsplatz",
+        "3": "Sammlung und Spende von Kronkorken zum Recycling"
+      }
+    }
+  },
+  "projects": {
+    "codeCardGenerator": {
+      "title": "Pokémon GO Code-Karten-Generator",
+      "description": "Entwicklung eines webbasierten Tools, das von Pokémon GO Community-Ambassadoren zur Verteilung monatlicher Aktionscodes genutzt wird. Nimmt kommagetrennte Code-Batches entgegen und erzeugt anpassbare, druckfertige PDF-Kartenbögen (24 Karten pro A4-Seite) mit QR-Codes, eigenen Logos und Unterstützung für beidseitigen Druck."
+    }
+  }
+}
